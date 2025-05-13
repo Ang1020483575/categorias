@@ -1,6 +1,8 @@
 package com.cosmeticos.categorias.modelo.repositorios;
 
 import com.cosmeticos.categorias.modelo.entidades.Categoria;
+import jakarta.transaction.Transactional;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 
@@ -11,4 +13,10 @@ public interface CategoriaRepositorio extends Repository<Categoria, Long> {
 
     @Query(value = "select * from cosmeticos.categorias", nativeQuery = true)
     List<Categoria> traerTodo();
+
+    @Modifying
+    @Transactional
+    @Query(value =  "INSERT INTO cosmeticos.categorias (nombre_categoria) VALUES (:nombre)" , nativeQuery = true)
+    void  insertarCategoria(String nombre);
 }
+

@@ -25,4 +25,9 @@ public class CategoriaImplementacionServicio implements CategoriaServicio {
     public List<Categoria> getTodosCategoriasManual() {
         return categoriaRepositorio.traerTodo();
     }
+
+    @Override
+    public void insertarCategoria(Categoria cat){
+        categoriaRepositorio.insertarCategoria(cat.getNombre_categoria());
+    }
 }
