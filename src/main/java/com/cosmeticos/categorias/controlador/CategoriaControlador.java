@@ -17,6 +17,7 @@ public class CategoriaControlador {
         this.categoriaServicio = categoriaServicio;
     }
 
+    //Este metodo me devuelve todas las categorias.
     @GetMapping("/categorias")
     public List<Categoria> getCategorias(){
         return categoriaServicio.getTodosCategorias();
