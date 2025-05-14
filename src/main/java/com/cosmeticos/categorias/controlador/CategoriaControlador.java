@@ -29,5 +29,11 @@ public class CategoriaControlador {
         return categoriaServicio.getTodosCategoriasManual();
     }
 
+    @PostMapping("/insertarCategoria")
+    public  String insertarCategoria(@RequestBody Categoria categoria) {
+        categoriaServicio.insertarCategoria(categoria);
+        return "Categoria insertada correctamente";
+    }
+
 }
 
