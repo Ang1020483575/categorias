@@ -14,9 +14,5 @@ public interface CategoriaRepositorio extends Repository<Categoria, Long> {
     @Query(value = "select * from cosmeticos.categorias", nativeQuery = true)
     List<Categoria> traerTodo();
 
-    @Modifying
-    @Transactional
-    @Query(value =  "INSERT INTO cosmeticos.categorias (nombre_categoria) VALUES (:nombre)" , nativeQuery = true)
-    void  insertarCategoria(String nombre);
 }
 

@@ -26,8 +26,4 @@ public class CategoriaImplementacionServicio implements CategoriaServicio {
         return categoriaRepositorio.traerTodo();
     }
 
-    @Override
-    public void insertarCategoria(Categoria cat){
-        categoriaRepositorio.insertarCategoria(cat.getNombre_categoria());
-    }
 }
