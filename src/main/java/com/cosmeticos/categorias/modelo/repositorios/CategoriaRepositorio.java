@@ -17,7 +17,12 @@ public interface CategoriaRepositorio extends Repository<Categoria, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO categorias(nombre_categoria) VALUES (:nombre)", nativeQuery = true)
-    void insertarCategoria(@Param("nombre") String nombre);
+    @Query(value = "INSERT INTO cosmeticos.categorias(nombre_categoria) VALUES (:nombre)", nativeQuery = true)
+    void insertarCategoria(String nombre);
+
+    @Modifying
+    @Transactional
+    @Query(value = "UPDATE cosmeticos.categorias SET nombre_categoria = :nombre WHERE id_categorias = :idCat", nativeQuery = true)
+    void actualizarCategoria(String nombre, Long idCat);
 }
 

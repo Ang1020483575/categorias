@@ -13,8 +13,8 @@ import lombok.*;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria")
-    Long id_categoria;
+    @Column(name = "id_categorias")
+    Long id_categorias;
     @Column(name = "nombre_categoria")
     String nombre_categoria;
 }

@@ -7,4 +7,5 @@ public interface CategoriaServicio {
     List<Categoria> getTodosCategorias();
     List<Categoria> getTodosCategoriasManual();
     void insertarCategoria(Categoria cat);
+    void actualizarCategoria(Categoria cat);
 }

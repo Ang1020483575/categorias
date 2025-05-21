@@ -31,4 +31,9 @@ public class CategoriaImplementacionServicio implements CategoriaServicio {
         categoriaRepositorio.insertarCategoria(cat.getNombre_categoria());
     }
 
+    @Override
+    public void actualizarCategoria(Categoria cat){
+        categoriaRepositorio.actualizarCategoria(cat.getNombre_categoria(), cat.getId_categorias());
+    }
+
 }
